@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:contentDescription="@string/icon_help_cd"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blue_track" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:id="@+id/my_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+        <LinearLayout
+            android:alpha="1"
+            android:background="@color/color3x"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/settings_TV_time_editor"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/time1_secs"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    style="@style/settings_TV_time_editor"
+                    android:background="@drawable/settings_secondary_boxes"
+                    android:hint="@string/time1_secs"
+                    android:id="@+id/time1_et"
+                    android:inputType="numberDecimal"
+
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/default_text"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:contentDescription="@string/icon_help_cd"
+                    android:id="@+id/timings_info_1"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/help_icon"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/settings_TV_time_editor"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/time2_secs"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    style="@style/settings_TV_time_editor"
+                    android:background="@drawable/settings_secondary_boxes"
+                    android:hint="@string/time2_secs"
+                    android:id="@+id/time2_et"
+                    android:inputType="numberDecimal"
+
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/default_text"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:contentDescription="@string/icon_help_cd"
+                    android:id="@+id/timings_info_2"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/help_icon"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/settings_TV_time_editor"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/time3_secs"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    style="@style/settings_TV_time_editor"
+                    android:background="@drawable/settings_secondary_boxes"
+                    android:hint="@string/t3_1"
+                    android:id="@+id/time31_et"
+                    android:inputType="numberDecimal"
+
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/default_text"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    style="@style/settings_TV_time_editor"
+                    android:background="@drawable/settings_secondary_boxes"
+                    android:hint="@string/t3_1"
+                    android:id="@+id/time32_et"
+                    android:inputType="numberDecimal"
+
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/default_text"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:contentDescription="@string/icon_help_cd"
+                    android:id="@+id/timings_info_3"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_width="40dp"
+                    android:src="@drawable/help_icon"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/settings_main_buttons"
+                    android:background="@drawable/settings_main_buttons"
+                    android:id="@+id/save_time_btn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/save"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    style="@style/settings_main_buttons"
+                    android:background="@drawable/settings_main_buttons"
+                    android:id="@+id/reset_time_btn"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/reset"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">TrackStarter</string>
+    <string name="frag1">INICIO</string>
+    <string name="stop">PARAR</string>
+    <string name="menu1">Tiempos</string>
+    <string name="menu2">Sonidos</string>
+    <string name="settings">Ajustes</string>
+    <string name="reaction">Reaccion</string>
+    <string name="reac_btn_unpressable">Ningún tiempo de reaccion ha sido registrado</string>
+    <string name="accel_low">Valor demasiado bajo</string>
+    <string name="accel_neg">Valor no puede ser mas bajo de 0</string>
+
+    <string name="label1">Movimiento</string>
+    <string name="label2_1">Sensibilidad salida</string>
+    <string name="label2_2">Sensibilidad salida nula</string>
+    <string name="label3">Tiempo salida</string>
+
+    <string name="xlabel">Milisegundos</string>
+    <string name="reactiontime">Tiempo de reaccion</string>
+    <string name="false_start">Salida nula</string>
+
+    <string name="channel_name">Reproductor de sonido</string>
+    <string name="channel_description">Informa de que el reproductor esta en uso</string>
+
+    <string name="data_deletion">Grafica será eliminada, continuar?</string>
+
+    <string name="settings_NaN">Parametros tienen que ser numeros</string>
+
+    <string name="reac_hint">La sensibilidad se puede cambiar en ajustes de acelerometro</string>
+
+    <string name="hint1exp">La sensibilidad de salida es el mínimo movimiento que se considerara como reaccion.
+        Si no se detecta tu reaccion, baja la sensibilidad. Si la app detecta salidas nulas a causa de movimientos leves previos a la salida,
+        sube la sensibilidad. El valor estandar es 1.</string>
+    <string name="hint2exp">La sensibilidad de salida nula es el mínimo movimiento que se considerara como reaccion, si se
+        detecta entre LISTOS y YA. Es mas alto que la sensibilidad de salida para que al colocarse en la posicion de LISTOS
+        el movimiento no se confunda con una salida nula. El valor estandar es 5.</string>
+    <string name="hint3exp">El calibrado es un ajuste que el usuario puede hacer si el tiempo de reaccion es demasiado alto o bajo.
+        Si aumentas de 0 a 100 este valor, el tiempo de reaccion será 0.100 mas alto; si bajas de 0 a -100, el tiempo de reaccion
+        será 0.100 mas bajo. El valor estandar es 0ms.</string>
+
+    <string name="frag2">TIEMPO</string>
+    <string name="sound3_change">No se recomineda cambiar el sonido 3, el tiempo de reaccion perdera precision, seguir?</string>
+    <string name="reaction_time1">Sensibilidad salida</string>
+    <string name="reaction_time2">Sensibilidad salida nula</string>
+    <string name="reaction_time3">Calibrar tiempo (ms)</string>
+
+
+    <string name="hint1"><b>Que es esto?</b></string>
+    <string name="hint2"><b>Que valor pongo?</b></string>
+
+    <string name="frag3">SONIDOS</string>
+    <string name="settings3">Accelerometro</string>
+
+    <string name="press_ready">PULSA BOTON START</string>
+    <string name="time1_secs">Tiempo 1 (s)</string>
+    <string name="time2_secs">Tiempo 2 (s)</string>
+    <string name="t3_1">Min</string>
+    <string name="t3_2">Max</string>
+
+    <string name="sound1">Sonido 1</string>
+    <string name="sound2">Sonido 2</string>
+    <string name="sound3">Sonido 3</string>
+    <string name="change">Cambiar</string>
+    <string name="hint">Nombre nuevo sonido</string>
+
+    <string name="default_text">XX</string>
+    <string name="on_your_marks">A SUS PUESTOS</string>
+    <string name="set">LISTOS</string>
+    <string name="icon_help_cd">info</string>
+    <string name="go">YA</string>
+
+    <string name="save">GUARDAR</string>
+    <string name="reset">RESET</string>
+    <string name="info_message">RESET</string>
+    <string name="dialogue1">Pulsa INICIO para empezar. Si quieres hacer salidas de tacos y obtener
+        tu tiempo de reaccion, coloca el móvil en contacto directo con los tacos (detras del taco trasero
+        por ejemplo). Si no vas a usar tacos puedes colocar el móvil en tu mano o en cualquier parte
+        del cuerpo que se vaya a mover cuando reacciones. Para cambiar el sonido de A SUS PUESTOS,
+        LISTOS y YA ves a ajustes de Sonido. Para cambiar el intervalo entre los sonidos ves a ajustes de Tiempo.
+        Si quieres cambiar la sensibilidad del acelerometro o calibrar el tiempo de raccion ves a ajustes de
+        acelerometro.</string>
+    <string name="dialogue2">Si tienes problemas puedes contactar pablo.trescoli@gmail.com</string>
+    <string name="record">GRABAR</string>
+    <string name="play">REPRODUCIR</string>
+    <string name="recorder">Grabadora de sonidos</string>
+    <string name="player">Reproductor de sonidos</string>
+    <string name="recording_on">Grabadora ya esta grabando</string>
+    <string name="player_on">Reproductor actualmente en reproduccion</string>
+    <string name="audioname_invalid">Nombre debe ser de mas de 1 y menos de 15 caracteres</string>
+    <string name="audio_invalid">Ningún audio ha sido grabado</string>
+    <string name="add_sound">Nuevo Sonido</string>
+    <string name="back_editor">Atras</string>
+
+    <string name="delete_confirm">Eliminar?</string>
+    <string name="delete_yes">Si</string>
+    <string name="delete_no">No</string>
+    <string name="delete_success">Audio eliminado</string>
+
+    <string name="save_success">Cambios guardados</string>
+    <string name="start_fail">Programa ya ha empezado</string>
+    <string name="start_stopped">Parado</string>
+    <string name="save_fail">Los Tiempos deben ser mas de 0 y menos de 40 segundos</string>
+    <string name="go_info">El tiempo real entre SET y GO será seleccionado aleatoramiente en un rango de +-10% del valor guardado</string>
+    <string name="go_confirm">Perfecto</string>
+    <string name="reset_success">Tiempos reseteados. Recuerda guardar primero</string>
+
+    <string name="timings1_info">Tiempo 1 es el intervalo en segundos entre apretar el boton INICIO y oir el audio de A SUS PUESTOS</string>
+    <string name="timings2_info">Tiempo 2 es el intervalo en segundos entre el audio de A SUS PUESTOS y el audio de LISTOS</string>
+    <string name="timings3_info">Elige el tiempo máximo y mínimo entre LISTOS y YA, un valor aleatorio entre MIN y MAX se escogera en cada salida</string>
+    <string name="sound_info">Cambia los sonidos que quieres oir para ON YOUR MARKS, SET and GO</string>
+
+    <string name="default_sound">Estandar</string>
+    <string name="non_deletable">Este archivo no puede ser eliminado</string>
+
+    <string name="sound_selected1">Elegir este audio?</string>
+    <string name="sound_selected_success">Nuevo audio elegido</string>
+    <string name="start">Inicio</string>
+
+</resources>

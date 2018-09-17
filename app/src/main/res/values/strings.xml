@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">TrackStarter</string>
+    <string name="frag1">START</string>
+    <string name="stop">STOP</string>
+    <string name="menu1">Timing</string>
+    <string name="menu2">Sounds</string>
+    <string name="settings">Settings</string>
+    <string name="reaction">Reaction</string>
+    <string name="reac_btn_unpressable">No reaction time available</string>
+    <string name="accel_low">Accelerometer sensitivity is too low</string>
+    <string name="accel_neg">Accelerometer sensitivity can not be 0 or less than 0</string>
+
+    <string name="label1">Movement</string>
+    <string name="label2_1">Start Sensitivity</string>
+    <string name="label2_2">False Start Sensitivity</string>
+    <string name="label3">Start Time</string>
+
+    <string name="xlabel">Milliseconds</string>
+
+    <string name="reactiontime">Reaction Time</string>
+    <string name="false_start">False Start</string>
+
+    <string name="data_deletion">Data will be deleted, continue?</string>
+
+
+    <string name="channel_name">Sound player</string>
+    <string name="channel_description">Informs of background running</string>
+    <string name="t3_1">Min</string>
+    <string name="t3_2">Max</string>
+    <string name="reac_hint">Sensitivity can be changed in accelerometer settings</string>
+
+    <string name="settings_NaN">Parameters have to be numbers</string>
+
+
+
+    <string name="hint1exp">The start sensitivity is the minimum movement which will be considered a reaction. If TrackStarter isn\'t detecting your reaction, lower the sensitivity. If the app is detecting false starts which aren\'t false
+        because it detects minor movements, increase the sensitivity. The default value is 1.</string>
+
+    <string name="hint2exp">The false start sensitivity is the minimum movement which will be considered a reaction, if its detected between the SET and
+     GO sound. It is higher than the start sensitivity so that moving into SET position wont be mistaken as a false start. The
+    default value is 5.</string>
+
+    <string name="hint3exp">The time calibration is an adjustment users can make if the reaction time is too high or too low. Increasing the value from 0 to 100 will add 0.100 to your reaction. Decreasing
+        value from 0 to -100 will bring down the reaction by 0.100. Default is 0ms.</string>
+
+    <string name="frag2">TIMING</string>
+    <string name="sound3_change">It is not recommended to change sound 3 as the reaction time will lose accuracy, continue?</string>
+    <string name="reaction_time1">Start sensitivity</string>
+    <string name="reaction_time2">False start sensitivity</string>
+    <string name="reaction_time3">Time calibration (ms)</string>
+
+
+    <string name="settings3">Accelerometer</string>
+
+    <string name="hint1"><i><b>What is this?</b></i></string>
+    <string name="hint2"><i><b>What value do I use?</b></i></string>
+
+    <string name="frag3">SOUNDS</string>
+
+    <string name="press_ready">PRESS START BUTTON</string>
+    <string name="time1_secs">Time 1 (s)</string>
+    <string name="time2_secs">Time 2 (s)</string>
+    <string name="time3_secs">Time 3 (s)</string>
+    <string name="sound1">Sound 1</string>
+    <string name="sound2">Sound 2</string>
+    <string name="sound3">Sound 3</string>
+    <string name="change">Change</string>
+    <string name="hint">New sound name</string>
+
+
+
+    <string name="default_text">XX</string>
+    <string name="on_your_marks">ON YOUR MARKS</string>
+    <string name="set">SET</string>
+    <string name="icon_help_cd">info</string>
+    <string name="go">GO</string>
+    <string name="save">SAVE</string>
+    <string name="reset">RESET</string>
+    <string name="info_message">RESET</string>
+    <string name="dialogue1">Touch START to start. If you are doing block starts and
+    want to get your reaction time, place the phone in contact with the blocks
+        (behind the back block for example). If you are doing standing starts you can
+        place the phone in your hand or any part of your body which will move when you react.
+        To change the sounds for ON YOUR MARKS, SET and GO go to Sounds settings. To change the
+        timing between the sounds go to Timing settings. If you want to change the accelerometer\'s sensitivity
+        or calibrate the reaction time go to Accelerometer settings.
+    </string>
+    <string name="dialogue2">If you encounter any issues, you can contact pablo.trescoli@gmail.com</string>
+    <string name="record">RECORD</string>
+    <string name="play">PLAY</string>
+    <string name="recorder">Sound recorder</string>
+    <string name="player">Sound player</string>
+    <string name="recording_on">Grabadora ya esta grabando</string>
+    <string name="player_on">Reproductor en uso</string>
+    <string name="audioname_invalid">Name must be more than 1 and less than 15 characters long</string>
+    <string name="audio_invalid">No file recorded</string>
+    <string name="add_sound">Add Sound</string>
+    <string name="back_editor">Back</string>
+
+    <string name="delete_confirm">Delete?</string>
+    <string name="delete_yes">Yes</string>
+    <string name="delete_no">No</string>
+    <string name="delete_success">Deleted successfully</string>
+
+
+    <string name="save_success">Saved successfully</string>
+    <string name="start_fail">Program already started</string>
+    <string name="start_stopped">Stopped</string>
+    <string name="save_fail">Times should be more than 0 and less than 40 seconds</string>
+    <string name="go_info">The actual time between the SET and GO sounds will be +-10% of the configured value</string>
+    <string name="go_confirm">Got it</string>
+    <string name="reset_success">Times resetted. Remember to save first</string>
+
+    <string name="timings1_info">Time 1 is the time interval between pressing the START button, and hearing the ON YOUR MARKS sound</string>
+    <string name="timings2_info">Time 2 is the time interval between hearing the ON YOUR MARKS sound, and the SET sound</string>
+    <string name="timings3_info">Choose the minimum and maximum time between SET and GO, a random value will be assigned in every start </string>
+    <string name="sound_info">Change the sound you want to hear for ON YOUR MARKS, SET and GO</string>
+
+    <string name="default_sound">Default</string>
+    <string name="non_deletable">This file can not be deleted</string>
+
+    <string name="sound_selected1">Select sound?</string>
+    <string name="sound_selected_success">New sound saved</string>
+    <string name="start">Start</string>
+
+
+</resources>
