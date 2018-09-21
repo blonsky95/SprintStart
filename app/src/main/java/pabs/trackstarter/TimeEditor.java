@@ -20,7 +20,6 @@ import android.widget.Toast;
 
 public class TimeEditor extends AppCompatActivity {
 
-
     private Long time1;
     private Long time2;
     private Long time31,time32;
@@ -30,7 +29,6 @@ public class TimeEditor extends AppCompatActivity {
     private EditText time2et;
 
     private EditText time31et,time32et;
-
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -128,10 +126,7 @@ public class TimeEditor extends AppCompatActivity {
 
                 });
 
-
                 builder_help.show();
-
-
             }
         });
 
@@ -182,7 +177,6 @@ public class TimeEditor extends AppCompatActivity {
         editor.putLong("time32", time32);
 
         editor.apply();
-
     }
 
     private void resetData() {
@@ -223,10 +217,8 @@ public class TimeEditor extends AppCompatActivity {
 
                 return true;
 
-
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 }

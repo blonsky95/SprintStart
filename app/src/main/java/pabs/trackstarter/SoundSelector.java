@@ -1,26 +1,18 @@
 package pabs.trackstarter;
 
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBar;
-import android.app.AlertDialog;
+
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.LayoutInflater;
+
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -42,7 +34,6 @@ public class SoundSelector extends AppCompatActivity {
         soundID = rIntent.getIntExtra("soundIdentifier", 0);
 
         loadSounds();
-
     }
 
     String extDir = Environment.getExternalStorageDirectory().toString();
@@ -108,8 +99,6 @@ public class SoundSelector extends AppCompatActivity {
                 return true;
 
             case android.R.id.home:
-       //         NavUtils.navigateUpFromSameTask(this);
-        //        Log.e("LISTEN","HOME IS CALLED");
 
                 // UP NAVIGATION DOESNT TAKE ACTIVITY TO PARENT ACTIVITY - SHORT TERM SOLUTION
                 Intent backSoundEditor=new Intent(SoundSelector.this,SoundEditor.class);

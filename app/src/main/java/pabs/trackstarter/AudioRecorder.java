@@ -4,7 +4,6 @@ import android.Manifest;
 
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
@@ -12,9 +11,7 @@ import android.media.MediaRecorder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -95,17 +92,6 @@ public class AudioRecorder extends AppCompatActivity {
             mFileName2 = directory1.toString();
             mFileName1 = directory1.toString() + "/000test.3gp";
 
-//            File extDirFile = new File(extDir);
-//            File[] files = extDirFile.listFiles();
-//            File[] d1files = directory1.listFiles();
-//            File[] d2files = directory2.listFiles();
-//
-//            for (int i = 0; i < d1files.length; i++) {
-//                Log.e("Files2", "FileName:" + d1files[i].getName());
-//            }
-//            for (int i = 0; i < d2files.length; i++) {
-//                Log.e("Files3", "FileName:" + d2files[i].getName());
-//            }
         }
         else {
             ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
@@ -307,18 +293,6 @@ public class AudioRecorder extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        switch (requestCode) {
-//
-//            case REQUEST_RECORD_AUDIO_PERMISSION:
-//                permissionToRecordAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-//                permissionToReadESAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-//                permissionToWriteESAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
-//                break;
-//        }
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -344,7 +318,6 @@ public class AudioRecorder extends AppCompatActivity {
                 return true;
 
             case android.R.id.home:
-                // NavUtils.navigateUpFromSameTask(this);
 
                 // UP NAVIGATION DOESNT TAKE ACTIVITY TO PARENT ACTIVITY - SHORT TERM SOLUTION
                 Intent backSoundEditor=new Intent(AudioRecorder.this,SoundEditor.class);

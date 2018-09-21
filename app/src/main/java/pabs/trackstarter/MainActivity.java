@@ -2,12 +2,10 @@ package pabs.trackstarter;
 
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -24,7 +22,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -33,8 +30,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -52,9 +47,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
     private String[] permissions = {Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
-    private boolean permissionToRecordAccepted = false;
-    private boolean permissionToReadESAccepted = false;
-    private boolean permissionToWriteESAccepted = false;
 
     private long time1;
 
@@ -101,23 +93,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        if (String.valueOf(getIntent()).indexOf("1040") > 0) {
-
-//store booleans in preferences
-
-        }
-        String intent = getIntent().toString();
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_activity);
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
         createNotificationChannel();
-
-
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -410,9 +390,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 resultIntent.setAction(Intent.ACTION_MAIN);
                 resultIntent.addCategory(Intent.CATEGORY_LAUNCHER);
                 resultIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-//                TaskStackBuilder stackBuilder = TaskStackBuilder.create(MainActivity.this);
-//                stackBuilder.addParentStack(MainActivity.class);
-//                stackBuilder.addNextIntent(resultIntent);
                 PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, resultIntent, 0);
 
                 NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
@@ -552,9 +529,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         switch (requestCode) {
 
             case REQUEST_RECORD_AUDIO_PERMISSION:
-                permissionToRecordAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-                permissionToReadESAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-                permissionToWriteESAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
+                boolean permissionToReadESAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+                boolean permissionToWriteESAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
                 break;
         }
     }

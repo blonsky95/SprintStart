@@ -1,15 +1,12 @@
 package pabs.trackstarter;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -26,16 +23,13 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ReactionTime extends AppCompatActivity {
     float[] arrayTime;
     float[] arrayAccel;
-    long time0;
     long time1;
     long time2;
-    long timef;
 
     int offset;
 
@@ -162,19 +156,10 @@ public class ReactionTime extends AppCompatActivity {
             entries3.add(new Entry(false_start_time, min_a));
         }
 
-      //  Log.e("part 2_1 arrays","time "+ Arrays.toString(arrayTimePart2)+"accel "+ Arrays.toString(arrayDeltaPart2));
-
         String reactionTime = reactionDisplay(time2);
 
         TextView reactionTV = findViewById(R.id.reaction_time);
         reactionTV.setText(reactionTime);
-
-
-
-       // Log.e("kkkkk", arrayTimePart2[0]+" "+arrayTimePart2[arrayTimePart2.length - 1]);
-       // Log.e("lengths",arrayDeltaPart2.length+" "+arrayTimePart2.length);
-
-
 
         LineDataSet dataSet = new LineDataSet(entries, getResources().getString(R.string.label1));
         dataSet.setColor(R.color.blue);
@@ -272,9 +257,6 @@ public class ReactionTime extends AppCompatActivity {
             return mFormat.format(value);
         }
 
-        /**
-         * this is only needed if numbers are returned, else return 0
-         */
         private int getDecimalDigits() {
             return 1;
         }
@@ -296,9 +278,6 @@ public class ReactionTime extends AppCompatActivity {
             return mFormat.format(value);
         }
 
-        /**
-         * this is only needed if numbers are returned, else return 0
-         */
         private int getDecimalDigits() {
             return 1;
         }
@@ -334,7 +313,6 @@ public class ReactionTime extends AppCompatActivity {
                 TextView txt3 = (TextView) dialog2.findViewById(R.id.text1);
                 txt3.setText(getString(R.string.reac_hint));
 
-
                 dialog2.show();
 
                 return true;
@@ -355,25 +333,7 @@ public class ReactionTime extends AppCompatActivity {
 
     public void backDialogue() {
         backHome();
-//        AlertDialog.Builder builder = new AlertDialog.Builder(ReactionTime.this);
-//
-//
-//        builder.setMessage(getResources().getString(R.string.data_deletion));
-//        builder.setPositiveButton(getString(R.string.delete_yes), new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//                backHome();
-//            }
-//        });
-//
-//        builder.setNegativeButton(getString(R.string.delete_no), new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//
-//            }
-//        });
-//
-//        builder.show();
+
     }
 
     public void backHome() {
