@@ -9,6 +9,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -24,6 +25,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,6 +40,8 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
@@ -553,13 +561,37 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 txt1.setText(getString(R.string.dialogue1));
                 TextView txt2 = (TextView) dialog.findViewById(R.id.text2);
                 txt2.setText(getString(R.string.dialogue2));
+                TextView txtpp = (TextView) dialog.findViewById(R.id.text3);
+                txtpp.setText(getString(R.string.dialogue3));
+                txtpp.setMovementMethod(LinkMovementMethod.getInstance());  // Add this line
+
+                String txtppText = txtpp.getText().toString();
+
+                // Using regex to validate if the string is a URL
+                String urlRegex = "(http|https)://(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
+
+                Pattern pattern = Pattern.compile(urlRegex);
+                Matcher matcher = pattern.matcher(txtppText);
+
+                SpannableString spannableString = new SpannableString(txtppText);
+
+                while (matcher.find()) {
+                    int start = matcher.start();
+                    int end = matcher.end();
+                    URLSpan urlSpan = new URLSpan(txtppText.substring(start, end)) {
+                        @Override
+                        public void updateDrawState(TextPaint ds) {
+                            super.updateDrawState(ds);
+                            ds.setColor(Color.BLUE);  // Set your desired color here.
+                            ds.setUnderlineText(false);
+                        }
+                    };
+                    spannableString.setSpan(urlSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+
+                txtpp.setText(spannableString);
 
                 dialog.show();
-
-                return true;
-            case R.id.timing:
-                Intent timingIntent = new Intent(this, TimeEditor.class);
-                startActivity(timingIntent);
 
                 return true;
 

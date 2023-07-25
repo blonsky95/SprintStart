@@ -85,6 +85,7 @@
         timing between the sounds go to Timing settings. If you want to change the accelerometer\'s sensitivity
         or calibrate the reaction time go to Accelerometer settings.
     </string>
+    <string name="dialogue3">Link to privacy policy: https://doc-hosting.flycricket.io/trackstarter-privacy-policy/2518c7b2-5cb8-47e8-9549-375e4fe3f437/privacy</string>
     <string name="dialogue2">If you encounter any issues, you can contact pablo.trescoli@gmail.com</string>
     <string name="record">RECORD</string>
     <string name="play">PLAY</string>

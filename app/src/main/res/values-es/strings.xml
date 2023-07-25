@@ -79,6 +79,7 @@
         LISTOS y YA ves a ajustes de Sonido. Para cambiar el intervalo entre los sonidos ves a ajustes de Tiempo.
         Si quieres cambiar la sensibilidad del acelerometro o calibrar el tiempo de raccion ves a ajustes de
         acelerometro.</string>
+    <string name="dialogue3">Link a politica de privacidad de TrackStarter: https://doc-hosting.flycricket.io/trackstarter-privacy-policy/2518c7b2-5cb8-47e8-9549-375e4fe3f437/privacy</string>
     <string name="dialogue2">Si tienes problemas puedes contactar pablo.trescoli@gmail.com</string>
     <string name="record">GRABAR</string>
     <string name="play">REPRODUCIR</string>
