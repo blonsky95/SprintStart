@@ -127,9 +127,13 @@ public class SoundEditor extends AppCompatActivity {
         soundAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AudioRecorder.class);
-                startActivity(intent);
-                finish();
+                AlertDialog.Builder builder = new AlertDialog.Builder(SoundEditor.this);
+
+                builder.setMessage(getApplicationContext().getResources().getString(R.string.sound_disabled)).setCancelable(true);
+                builder.show();
+//                Intent intent = new Intent(getApplicationContext(), AudioRecorder.class);
+//                startActivity(intent);
+//                finish();
             }
         });
 

@@ -43,6 +43,7 @@
     <string name="reaction_time1">Sensibilidad salida</string>
     <string name="reaction_time2">Sensibilidad salida nula</string>
     <string name="reaction_time3">Calibrar tiempo (ms)</string>
+    <string name="sound_disabled">Grabar sonidos se ha deshabilitado desde la ultima version debido a cambios en la version de Android. Contactar con pablo.trescoli@gmail.com para asistencia.</string>
 
 
     <string name="hint1"><b>Que es esto?</b></string>
@@ -54,6 +55,7 @@
     <string name="press_ready">PULSA BOTON START</string>
     <string name="time1_secs">Tiempo 1 (s)</string>
     <string name="time2_secs">Tiempo 2 (s)</string>
+    <string name="time3_secs">Tiempo 3 (s)</string>
     <string name="t3_1">Min</string>
     <string name="t3_2">Max</string>
 

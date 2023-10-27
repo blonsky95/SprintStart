@@ -398,7 +398,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 resultIntent.setAction(Intent.ACTION_MAIN);
                 resultIntent.addCategory(Intent.CATEGORY_LAUNCHER);
                 resultIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, resultIntent, 0);
+                PendingIntent resultPendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, resultIntent, PendingIntent.FLAG_IMMUTABLE);
 
                 NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
                         .setSmallIcon(R.drawable.play_on)
@@ -592,6 +592,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 txtpp.setText(spannableString);
 
                 dialog.show();
+
+                return true;
+
+            case R.id.timing:
+                Intent timingIntent = new Intent(this, TimeEditor.class);
+                startActivity(timingIntent);
 
                 return true;
 

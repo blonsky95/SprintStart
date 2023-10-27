@@ -48,6 +48,7 @@
     <string name="reaction_time1">Start sensitivity</string>
     <string name="reaction_time2">False start sensitivity</string>
     <string name="reaction_time3">Time calibration (ms)</string>
+    <string name="sound_disabled">Recording sounds has been disabled since the latest version due to changes in Android versions. Please contact pablo.trescoli@gmail.com if serious issue.</string>
 
 
     <string name="settings3">Accelerometer</string>
